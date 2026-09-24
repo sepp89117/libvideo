@@ -337,13 +337,12 @@ namespace VideoLibrary
                 {
                     client = new
                     {
-                        clientName = "ANDROID_VR",
-                        clientVersion = "1.60.19",
-                        deviceMake = "Oculus",
-                        deviceModel = "Quest 3",
-                        osName = "Android",
-                        osVersion = "12L",
-                        platform = "MOBILE",
+                        clientName = "VISIONOS",
+                        clientVersion = "1.02",
+                        deviceMake = "Apple",
+                        deviceModel = "RealityDevice17,1",
+                        osName = "visionOS",
+                        osVersion = "26.5.23O471",
                         hl = "en",
                         gl = "US",
                         utcOffsetMinutes = 0,
@@ -353,7 +352,7 @@ namespace VideoLibrary
             };
 
             request.Content = new StringContent(JsonSerializer.Serialize(content));
-            request.Headers.Add("User-Agent", "com.google.android.apps.youtube.vr.oculus/1.60.19 (Linux; U; Android 12L; Quest 3 Build/SQ3A.220605.009.A1) gzip");
+            request.Headers.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 15_7_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Safari/605.1.15");
             var response = await httpClient.SendAsync(request);
 
             if (response.IsSuccessStatusCode)
